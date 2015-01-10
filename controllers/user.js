@@ -9,7 +9,13 @@ module.exports = function(app){
 				if(err){
 					 console.error('Erro in find user'+err);
 				}else{
-					 res.render('user/index', {title:'User | Mr.Swift', database:data, moment:moment});
+					 res.render('user/index',
+					 {
+					   title:'User | Mr.Swift'
+					   ,database:data
+					   , moment:moment
+					 	
+					 });
 				} 
 			});
 			
@@ -62,7 +68,11 @@ module.exports = function(app){
 				if(err){
 				console.log('Error about render this file'+err);
 				}else{
-					res.render('user/file', {value: data});
+					res.render('user/file', 
+					{
+						value: data
+						
+					});
 				}
 			});
 		},

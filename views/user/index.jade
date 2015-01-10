@@ -26,7 +26,7 @@ block content
             td #{db.password}
             td #{moment(db.data_cad).format('DD/MM/YYYY, h:mm:ss a')}
             td 
-              input(type="submit",value='Update')
-              input(type="submit",value='Excluir')
+              a(href="/user/edit/#{db._id}") Update |
+              a(href="/user/file/#{db._id}") | Drop
     br
     a(href='/user/create',class='btn') Create User

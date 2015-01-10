@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  section
+    h1 Create new User
+    br
+    form(method="POST",action="/user/edit/#{value_id}",form="role")
+      br
+      br
+      Label Nome: 
+      input(type="text", name="nome",value="#{value.nome}")
+      br
+      br
+      Label Email: 
+      input(type="text", name="email",value="#{value.email}");
+      br
+      br
+      Label Senha: 
+      input(type="password", name="password",value="#{value.senha}")
+      br
+      br
+      input(type="submit",class="btn", value="Cadastrar")
+    br
+    br
+    a(href='/user',class='btn') Back
+

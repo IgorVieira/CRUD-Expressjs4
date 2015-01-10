@@ -69,6 +69,6 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port,host, function(){
-    console.info('Server is running');
+    console.info('Server is running in http://%s:%d',host,port);
 })
 module.exports = app;

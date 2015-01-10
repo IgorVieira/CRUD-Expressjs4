@@ -1,0 +1,88 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+}
+nav ul {
+  background: #000;
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0.8em;
+}
+nav ul li:hover {
+  color: #ccc;
+}
+section {
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  padding: 5.5em;
+  width: 100 vm;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+  margin: 0.5em auto;
+}
+td,
+th {
+  padding: 0.25em;
+  text-align: center;
+  border-bottom: 0.2em solid #ccc;
+}
+th {
+  border-bottom: 0.3rem solid #000;
+}
+td {
+  background: #eef;
+}
+.logo {
+  text-align: center;
+  background: #ccc;
+  border-color: #fff;
+  border-radius: 1 vm;
+  font-size: 1em;
+  color: #000;
+  float: left;
+  position: absolute;
+  top: 1rem;
+  left: 6%;
+  width: 5rem;
+  padding: 1.3rem 1.5rem;
+}
+.logo:hover {
+  color: #000;
+}
+.btn {
+  display: inline-block;
+  background-color: #ccc;
+  color: #444;
+  padding: 10px 20px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  border: 0px;
+}

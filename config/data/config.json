@@ -1,0 +1,8 @@
+{
+	"secret":"uwotm8swift"
+	, "resave":true
+	, "save":true	
+	, "KEY" :"machine"
+	, "port":3000
+	, "host":"127.0.0.1"
+}

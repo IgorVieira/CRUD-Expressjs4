@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  section
+    h1 Welcome to User 
+    p Mr.Swift this better itService
+  section
+    br
+    br
+    br
+    table
+      thead
+        tr
+          th ID:
+          th Nome:
+          th Email:
+          th Passoword:
+          th Data:
+          th Action:
+      tbody
+        each db, i in database
+          tr
+            td #{db._id}
+            td #{db.nome}
+            td #{db.email}
+            td #{db.password}
+            td #{moment(db.data_cad).format('DD/MM/YYYY, h:mm:ss a')}
+            td 
+              input(type="submit",value='Update')
+              input(type="submit",value='Excluir')
+    br
+    a(href='/user/create',class='btn') Create User

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  section
+    h1= value.nome
+    br
+    br
+    p ID: #{value._id}
+    p Nome: #{value.nome}
+    p Email: #{value.email}
+    p Data de Cadastro: #{value.data_cad}
+    br
+    br
+    form(method="POST", action="/user/delete/#{value._id}", role="form")
+      input(type="hidden" name="_method" value="delete")
+      input(type="submit", value="Excluir", class="btn")
+    br
+    a(href="/user", title="Back") Back

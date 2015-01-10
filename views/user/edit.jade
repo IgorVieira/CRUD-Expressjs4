@@ -4,7 +4,8 @@ block content
   section
     h1 Create new User
     br
-    form(method="POST",action="/user/edit/#{value_id}",form="role")
+    form(method="POST",action="/user/edit/#{value._id}",form="role")
+      input(type="hidden" name="_method" value="put")  
       br
       br
       Label Nome: 
@@ -12,15 +13,12 @@ block content
       br
       br
       Label Email: 
-      input(type="text", name="email",value="#{value.email}");
+      input(type="text", name="email",value="#{value.email}")
       br
-      br
-      Label Senha: 
-      input(type="password", name="password",value="#{value.senha}")
-      br
-      br
-      input(type="submit",class="btn", value="Cadastrar")
+      br  
+      input(type="submit",class="btn", value="Update")
     br
     br
     a(href='/user',class='btn') Back
+
 

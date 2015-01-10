@@ -28,7 +28,36 @@ module.exports = function(app){
 				}
 				res.redirect('/user');
 			});
+		},
+		edit:function(req,res){
+			User.findById(req.params.id, function(err, data){
+				if(err){
+				console.log(err);
+				}else{
+					res.render('user/edit', {value: data});
+				}
+			});
+		},
+		update: function(req,res){
+			User.findById(req.params.id, function(err, data){
+				if(err){
+				  console.log('Error about req id'+err);
+				}else{
+					var model = data;
+					model.nome = req.body.nome;
+					model.email = req.body.email;
+					model.save(function(err){
+						if(err){
+							console.log('Don´t save this user'+ere);
+						}else{
+							res.redirect('/user');
+						}
+
+					});
+				}	
+			})
 		}
+
 	}
 	return userControllers;
 }

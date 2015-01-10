@@ -32,7 +32,7 @@ module.exports = function(app){
 		edit:function(req,res){
 			User.findById(req.params.id, function(err, data){
 				if(err){
-				console.log(err);
+				console.log('Error about render edit'+err);
 				}else{
 					res.render('user/edit', {value: data});
 				}
@@ -55,6 +55,24 @@ module.exports = function(app){
 
 					});
 				}	
+			})
+		},
+		file:function(req,res){
+			User.findById(req.params.id, function(err, data){
+				if(err){
+				console.log('Error about render this file'+err);
+				}else{
+					res.render('user/file', {value: data});
+				}
+			});
+		},
+		delete:function(req,res){
+			User.remove({_id: req.params.id}, function(err){
+				if(err){
+					console.log('Error about delete this user')
+				}else{
+					res.redirect('/user');
+				}
 			})
 		}
 
